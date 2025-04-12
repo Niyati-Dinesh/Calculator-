@@ -1,0 +1,107 @@
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Calculator</title> 
+        <style> 
+           le> 
+            * { 
+                font-family: Arial; 
+            } 
+            body { 
+                background-image: url(https://img.freepik.com/premium-vector/simple-aesthetic-floral-background-pastel-color_527873-598.jpg?w=1800);
+            } 
+            #container { 
+                text-align:center; 
+                width:300px; 
+                height:450px; 
+                border-radius: 6px; 
+                padding: 20px; 
+                position: absolute; 
+                display: block; 
+                box-shadow: 5px 10px 10px grey; 
+                top: 150px; 
+                left: 450px; 
+                margin: auto; 
+                background-image: 
+                url("https://th.bing.com/th/id/OIP.8E0uYq5T9BEZ6sk3HeiXJQHaFS?rs=1&pid=ImgDetMain" ); 
+                
+            } button { 
+                box-shadow: 5px 10px 10px grey; 
+                background-color: white; 
+                transition: 0.5s; 
+                padding:10px; 
+                font-size:25px; 
+                width:60px; 
+                height:60px; 
+            }
+            button:hover { 
+                transform: scale(1.01); 
+            } 
+            h2{ 
+                text-decoration:underline wavy rgb(255, 255, 255); 
+            } 
+            input{ 
+                height:40px; 
+                width:250px; 
+                font-size:20px; 
+            } 
+ 
+        </style> 
+    </head> 
+<body> 
+    <body> 
+        <div id="container"> 
+            <H2>CALCULATOR</H2><BR> 
+            <form> 
+                <input type="text" placeholder="0" id="t" readonly><br><br> 
+                <div> 
+                    <button type="button" onclick="add(this)">7</button> 
+                    <button type="button" onclick="add(this)">8</button> 
+                    <button type="button" onclick="add(this)">9</button> 
+                    <button type="button" onclick="add(this)">+</button> 
+                </div> 
+                <div> 
+                    <button type="button" onclick="add(this)">4</button> 
+                    <button type="button" onclick="add(this)">5</button> 
+                    <button type="button" onclick="add(this)">6</button> 
+                    <button type="button" onclick="add(this)">-</button> 
+                </div> 
+                <div> 
+                    <button type="button" onclick="add(this)">1</button> 
+                    <button type="button" onclick="add(this)">2</button> 
+                    <button type="button" onclick="add(this)">3</button> 
+                    <button type="button" onclick="add(this)">x</button>
+                </div><div> 
+                    <button type="button" onclick="add(this)">0</button> 
+                    <button type="button" onclick="add(this)">AC</button> 
+                    <button type="button" onclick="calculate()">=</button> 
+                    <button type="button" onclick="add(this)">/</button> 
+                </div> 
+            </form></div> 
+ 
+<script> 
+            function add(number){ 
+                x=number.innerText; 
+                if (x=="AC"){ 
+                    document.getElementById("t").value=""; 
+                } 
+                else{ 
+                    document.getElementById("t").value+=x; 
+                } 
+ 
+            } 
+            function calculate(){ 
+                exp=document.getElementById("t").value; 
+                exp=exp.replace("x","*"); 
+                exp=exp.replace("/","/"); 
+                try{ 
+                    document.getElementById("t").value=eval(exp); 
+                } 
+                catch (Exception){ 
+                    document.getElementById("t").value="Error"; 
+                } 
+            } 
+        </script> 
+</body> 
+</html>
